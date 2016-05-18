@@ -34,7 +34,7 @@ void g_file_stream_open(gpointer self, gstring name, GFileMode mode)
 	s->file_handle = (ghandle)vm_file_open((VMWSTR)g_unicode(s->file_name), GET_MODE(s->file_mode), TRUE);
 #endif
 #ifdef UNDER_IOT
-	s->file_handle = (ghandle)vm_file_open(s->file_name, GET_MODE(s->file_mode), TRUE);  
+	s->file_handle = (ghandle)vm_file_open(s->file_name, g_file_open_mode(s->file_mode), TRUE);  
 #endif  
 	if (g_file_stream_is_open(s))
 		open_file_count ++;

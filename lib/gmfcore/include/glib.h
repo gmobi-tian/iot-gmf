@@ -972,6 +972,7 @@ extern VMINT g_file_tell(VMFILE handle);
 extern VMINT g_file_is_eof(VMFILE handle);
 extern gboolean g_dir_exists(gstring path);
 extern gboolean g_file_exists(gstring path);
+extern VMINT g_file_open_mode(gint mode);
 
 extern VMINT g_real_file_delete(gstring path);
 extern VMINT g_real_file_rename(gstring oldpath, gstring newpath);
